@@ -1,9 +1,11 @@
 using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Blvckout.MyMasternode.Setup.Database.Entities;
 
 public class Setup
 {
+    [BsonId]
     public ObjectId Id { get; set; }
     
     public int MasternodeId { get; set; }
