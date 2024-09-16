@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // Wenn Sie Zielframeworks geändert haben, stellen Sie sicher, dass Sie den Programmpfad aktualisieren.
-            "program": "${workspaceFolder}/bin/Debug/net8.0/my-masternode-setup.dll",
+            "program": "${workspaceFolder}/src/bin/Debug/net8.0/my-masternode-setup.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/src",
             "stopAtEntry": false,
             // Aktivieren Sie das Starten eines Webbrowsers, wenn ASP.NET Core gestartet wird. Weitere Informationen: https://aka.ms/VSCode-CS-LaunchJson-WebBrowser
             "serverReadyAction": {
@@ -21,9 +21,6 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development"
-            },
-            "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
             }
         },
         {
