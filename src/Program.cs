@@ -15,7 +15,11 @@ builder.Services.AddOptions<DatabaseOptions>()
 // Add services to the container.
 builder.Services.AddSingleton<MyMasternodeSetupContext>();
 
-builder.Services.AddControllers();
+// Register AutoMapper
+builder.Services.AddAutoMapper(typeof(Program));
+
+builder.Services.AddControllers()
+    .AddNewtonsoftJson();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
