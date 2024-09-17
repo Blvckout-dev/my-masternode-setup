@@ -15,6 +15,8 @@ builder.Services.AddOptions<DatabaseOptions>()
 // Add services to the container.
 builder.Services.AddSingleton<MyMasternodeSetupContext>();
 
+builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true); 
+
 // Register AutoMapper
 builder.Services.AddAutoMapper(typeof(Program));
 
